@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 56, 78);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/** LOGIN FORM **/
+
+#login-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-form tr{
+    text-align: center;
+}
+
+#login-form table{
+    border-spacing: 20px;
+}
+
+#login-form button{
+    color: white;
+    background-color: rgb(0, 134, 186);
+    border: none;
+    width: 90px;
+    height: 30px;
+}
+
+#login-form button:hover{
+    background-color:white;
+    color: rgb(0, 134, 186);
+    border: 2px solid rgb(0, 134, 186);
+}
+
+#login-form input{
+    padding: 10px 0px 10px 0px;
+    color: rgb(0, 134, 186);
+    text-align: center;
+}
+
+#login-form input::placeholder{
+    color: rgb(0, 134, 186);
+}
+
+/** LOGIN FORM **/
+

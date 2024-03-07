@@ -1,3 +1,3 @@
 # HOME TODO
 
-    Collaborative Home Task Manager
+Collaborative Home Task Manager
