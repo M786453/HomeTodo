@@ -5,9 +5,17 @@
     <head>
         <title>HOME TODO</title>
 
+        <!-- SCRIPTS -->
+        <script src="assets/scripts/script.js"></script>
+        <!-- SCRIPTS -->
+
         <!-- STYLESHEET -->
         <link rel="stylesheet" href="assets/style/style.css"/>
         <!-- STYLESHEET -->
+
+         <!-- META -->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- META -->
 
     </head>
 
@@ -26,69 +34,15 @@
         <!-- ADD NEW TODO FORM -->
         
         <form class="add-todo-form">
-            <input type="text" placeholder="Enter TODO"/>
-            <button type="submit">ADD</button>
+            <input type="text" id="todo-input" placeholder="Enter TODO"/>
+            <button onclick="add_todo()">ADD</button>
         </form>
 
         <!-- ADD NEW TODO FORM -->
         
         <!-- TODO TABLE START -->
 
-        <table id="todo-table">
-
-            <tr class="todo-row">
-                <td>
-                    <div class="todo">
-                        <div class="title">This is a sample task. It is used for testing the layout. Designed and developed by Muhammad Ahtesham Sarwar. </div>
-                        <div class="date">Date: 3/7/2024</div>
-                    </div>
-                    <div class="todo-action">
-                        <div class="delete">DELETE</div>
-                        <div class="done">DONE</div>
-                    </div>
-                </td>
-            </tr>
-
-            <tr class="todo-row">
-                <td>
-                    <div class="todo">
-                        <div class="title">This is a sample task. It is used for testing the layout. Designed and developed by Muhammad Ahtesham Sarwar. </div>
-                        <div class="date">Date: 3/7/2024</div>
-                    </div>
-                    <div class="todo-action">
-                        <div class="delete">DELETE</div>
-                        <div class="done">DONE</div>
-                    </div>
-                </td>
-            </tr>
-
-            <tr class="todo-row">
-                <td>
-                    <div class="todo">
-                        <div class="title">This is a sample task. It is used for testing the layout. Designed and developed by Muhammad Ahtesham Sarwar. </div>
-                        <div class="date">Date: 3/7/2024</div>
-                    </div>
-                    <div class="todo-action">
-                        <div class="delete">DELETE</div>
-                        <div class="done">DONE</div>
-                    </div>
-                </td>
-            </tr>
-
-            <tr class="todo-row">
-                <td>
-                    <div class="todo">
-                        <div class="title">This is a sample task. It is used for testing the layout. Designed and developed by Muhammad Ahtesham Sarwar. </div>
-                        <div class="date">Date: 3/7/2024</div>
-                    </div>
-                    <div class="todo-action">
-                        <div class="delete">DELETE</div>
-                        <div class="done">DONE</div>
-                    </div>
-                </td>
-            </tr>
-
-        </table>
+        <table id="todo-table"></table>
 
         <!-- TODO TABLE START -->
 
