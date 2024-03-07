@@ -87,18 +87,30 @@ body{
 }
 
 .todo-action div{
-    padding: 20px 15px 15px 15px;
+    padding: 22px 15px 15px 15px;
     margin: 0px 0px 0px 10px;
 }
 
 .todo-action .done{
-    border: 2px solid greenyellow;
-    color: greenyellow;
+    border: 2px solid rgb(118, 197, 0);
+    color: rgb(118, 197, 0);
+}
+
+.todo-action .done:hover{
+    border: 2px solid white;
+    background-color: rgb(118, 197, 0);
+    color: white;
 }
 
 .todo-action .delete{
     border: 2px solid red;
     color: red;
+}
+
+.todo-action .delete:hover{
+    border: 2px solid white;
+    background-color: red;
+    color: white;
 }
 
 /** TODO ACTIONS **/
