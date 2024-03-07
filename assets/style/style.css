@@ -58,17 +58,22 @@ body{
 
 .todo-row td{
     display: flex;
+    height: 80px;
+    width: 600px;
+    margin: 10px;
 }
 
 /** TODO **/
 
 .todo{
     border: 2px solid white;
-    padding: 10px;
+    padding: 5px;
+    
 }
 
 .todo .title{
     font-size: medium;
+    text-align: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5px;
 }
@@ -87,8 +92,11 @@ body{
 }
 
 .todo-action div{
-    padding: 22px 15px 15px 15px;
+    padding: 15px;
     margin: 0px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .todo-action .done{
