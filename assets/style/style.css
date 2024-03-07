@@ -49,3 +49,59 @@ body{
 
 /** LOGIN FORM **/
 
+/** TODO TABLE **/
+#todo-table{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.todo-row td{
+    display: flex;
+}
+
+/** TODO **/
+
+.todo{
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.todo .title{
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+.todo .date{
+    font-size: smaller;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/** TODO **/
+
+/** TODO ACTIONS **/
+
+.todo-action{
+    display: flex;
+}
+
+.todo-action div{
+    padding: 20px 15px 15px 15px;
+    margin: 0px 0px 0px 10px;
+}
+
+.todo-action .done{
+    border: 2px solid greenyellow;
+    color: greenyellow;
+}
+
+.todo-action .delete{
+    border: 2px solid red;
+    color: red;
+}
+
+/** TODO ACTIONS **/
+
+
+/** TODO TABLE **/
