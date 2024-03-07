@@ -6,6 +6,10 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.header{
+    text-align: center;
+}
+
 /** LOGIN FORM **/
 
 #login-form form{
@@ -48,6 +52,41 @@ body{
 }
 
 /** LOGIN FORM **/
+
+/** ADD TOOD FORM **/
+
+.add-todo-form{
+    display: flex;
+    justify-content: center;
+}
+
+.add-todo-form input{
+    padding: 10px 0px 10px 0px;
+    color: rgb(0, 134, 186);
+    text-align: center;
+    margin: 10px;
+}
+
+.add-todo-form input::placeholder{
+    color: rgb(0, 134, 186);
+}
+
+.add-todo-form button{
+    padding: 10px;
+    background-color: rgb(0, 134, 186);
+    color: white;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid rgb(0, 134, 186);
+}
+
+.add-todo-form button:hover{
+    background-color:white;
+    color: rgb(0, 134, 186);
+    border: 2px solid rgb(0, 134, 186);
+}
+
+/** ADD TOOD FORM **/
 
 /** TODO TABLE **/
 #todo-table{
