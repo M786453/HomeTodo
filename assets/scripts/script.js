@@ -20,19 +20,34 @@ function add_todo(){
     var month = current_date.getMonth() + 1;
     var year = current_date.getFullYear();
 
-    var formattedDate = (day < 10 ? '0' : '') + day + '-' + (month < 10 ? '0' : '') + month + '-' + year
+    var formattedDate = (day < 10 ? '0' : '') + day + '-' + (month < 10 ? '0' : '') + month + '-' + year;
+
+    var cookie_data = document.cookie;
+
+    var home_password = cookie_data.split("=")[1]
 
     if(user_input.trim().length > 0){
 
-        var table = document.getElementById("todo-table")
-        
-        var todo_row = table.insertRow();
+        var xhr = new XMLHttpRequest();
 
-        todo_row.classList.add('todo-row');
+        var url = "http://127.0.0.1:5000/add_todo";
 
-        var todo = todo_row.insertCell(0);
+        var params = "todo=" + user_input + "&date=" + formattedDate + "&home_password=" + home_password;
+
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         
-        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + formattedDate + '</div><div class="delete" onclick="delete_todo(this)"><i class="fas fa-trash"></i></div><div class="done" onclick="complete_todo(this)"><i class="fas fa-check"></i></div></div><div class="title">' + user_input + '</div></div></td></tr>';
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+
+                console.log('Todo Saved.')
+
+            }
+        }
+
+        xhr.send(params)
 
     }
 
