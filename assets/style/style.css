@@ -128,7 +128,7 @@ body{
 
 .todo-header{
     display: grid;
-    grid-template-columns: 3fr 0.25fr 0.25fr;
+    grid-template-columns: 3fr 0.25fr;
     
 }
 
@@ -154,17 +154,6 @@ body{
 .todo-header .done:hover{
     border: 2px solid white;
     background-color: rgb(118, 197, 0);
-    color: white;
-}
-
-.todo-header .delete{
-    border: 2px solid red;
-    color: red;
-}
-
-.todo-header .delete:hover{
-    border: 2px solid white;
-    background-color: red;
     color: white;
 }
 
