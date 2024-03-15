@@ -48,9 +48,7 @@ function add_todo(){
         xhr.onreadystatechange = function(){
             if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
 
-                json_response = JSON.parse(xhr.responseText);
-
-                update_page(json_response);
+                location.reload();
 
             }
         }
@@ -109,6 +107,8 @@ function update_page(json_response){
 
         todo_row.classList.add('todo-row');
 
+        todo_row.setAttribute('id',key);
+
         var todo = todo_row.insertCell(0);
         
         todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + date + '</div><div class="done" onclick="complete_todo(this)"><i class="fas fa-check"></i></div></div><div class="title">' + todo_text + '</div></div></td></tr>';
@@ -119,6 +119,34 @@ function update_page(json_response){
 
 function complete_todo(done_button){
 
-    done_button.parentNode.parentNode.parentNode.parentNode.remove(); //Remove Todo Row
+    row = done_button.parentNode.parentNode.parentNode.parentNode;
+
+    var key = row.getAttribute('id');
+
+    var cookie_data = document.cookie;
+
+    var home_password = cookie_data.split("=")[1]
+
+    var xhr = new XMLHttpRequest();
+
+    var url = "http://127.0.0.1:5000/complete_todo";
+
+    var params = "home_password=" + home_password + "&key=" + key;
+
+    xhr.open('POST', url, true);
+
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function(){
+
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+
+            location.reload();
+
+        }
+
+    }
+
+    xhr.send(params)
 
 }
