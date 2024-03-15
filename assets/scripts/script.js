@@ -9,6 +9,13 @@ function add_todo(){
 
     var user_input = user_input_element.value;
 
+    var current_date = new Date();
+    var day = current_date.getDate();
+    var month = current_date.getMonth() + 1;
+    var year = current_date.getFullYear();
+
+    var formattedDate = (day < 10 ? '0' : '') + day + '-' + (month < 10 ? '0' : '') + month + '-' + year
+
     if(user_input.trim().length > 0){
 
         var table = document.getElementById("todo-table")
@@ -19,7 +26,7 @@ function add_todo(){
 
         var todo = todo_row.insertCell(0);
         
-        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="title">' + user_input + '</div><div class="date">Date: 3/7/2024</div></div><div class="todo-action"><div class="delete">DELETE</div><div class="done">DONE</div></div></td></tr>';
+        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + formattedDate + '</div><div class="delete"><i class="fas fa-trash"></i></div><div class="done"><i class="fas fa-check"></i></div></div><div class="title">' + user_input + '</div></div></td></tr>';
 
     }
 
