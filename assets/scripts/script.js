@@ -26,12 +26,18 @@ function add_todo(){
 
         var todo = todo_row.insertCell(0);
         
-        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + formattedDate + '</div><div class="delete"><i class="fas fa-trash"></i></div><div class="done"><i class="fas fa-check"></i></div></div><div class="title">' + user_input + '</div></div></td></tr>';
+        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + formattedDate + '</div><div class="delete" onclick="delete_todo(this)"><i class="fas fa-trash"></i></div><div class="done"><i class="fas fa-check"></i></div></div><div class="title">' + user_input + '</div></div></td></tr>';
 
     }
 
     user_input_element.value = "";
 
     event.preventDefault();
+
+}
+
+function delete_todo(del_button){
+
+    del_button.parentNode.parentNode.parentNode.parentNode.remove();
 
 }
