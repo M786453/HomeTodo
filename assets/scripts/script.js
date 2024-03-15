@@ -111,15 +111,9 @@ function update_page(json_response){
 
         var todo = todo_row.insertCell(0);
         
-        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + date + '</div><div class="delete" onclick="delete_todo(this)"><i class="fas fa-trash"></i></div><div class="done" onclick="complete_todo(this)"><i class="fas fa-check"></i></div></div><div class="title">' + todo_text + '</div></div></td></tr>';
+        todo.innerHTML += '<tr class="todo-row"><td><div class="todo"><div class="todo-header"><div class="date">Date: ' + date + '</div><div class="done" onclick="complete_todo(this)"><i class="fas fa-check"></i></div></div><div class="title">' + todo_text + '</div></div></td></tr>';
 
     }
-
-}
-
-function delete_todo(del_button){
-
-    del_button.parentNode.parentNode.parentNode.parentNode.remove(); //Remove Todo Row
 
 }
 
