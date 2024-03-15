@@ -1,5 +1,11 @@
 function login(){
+    
+    var password = document.getElementById('password').value
+
+    document.cookie = "home_password=" + password + "; SameSite=Strict;path=/;secure";
+
     window.location.href = "todo.html";
+
     event.preventDefault();
 }
 
@@ -38,12 +44,12 @@ function add_todo(){
 
 function delete_todo(del_button){
 
-    del_button.parentNode.parentNode.parentNode.parentNode.remove();
+    del_button.parentNode.parentNode.parentNode.parentNode.remove(); //Remove Todo Row
 
 }
 
 function complete_todo(done_button){
 
-    done_button.parentNode.parentNode.parentNode.parentNode.remove();
+    done_button.parentNode.parentNode.parentNode.parentNode.remove(); //Remove Todo Row
 
 }
