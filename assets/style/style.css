@@ -108,7 +108,6 @@ body{
     flex-direction: column;
     border: 2px solid white;
     padding: 5px;
-    height: 80px;
     width: 600px;
 }
 
@@ -121,51 +120,55 @@ body{
     overflow: auto;  
 }
 
-.todo .date{
-    font-size: smaller;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: auto;
-}
+
 
 /** TODO **/
 
-/** TODO ACTIONS **/
+/** TODO HEADER **/
 
-.todo-action{
-    display: flex;
+.todo-header{
+    display: grid;
+    grid-template-columns: 3fr 0.25fr 0.25fr;
+    
 }
 
-.todo-action div{
-    padding: 15px;
+.todo-header div{
+    padding: 7px;
     margin: 0px 0px 0px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.todo-action .done{
+.todo-header .date{
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: auto;
+}
+
+.todo-header .done{
     border: 2px solid rgb(118, 197, 0);
     color: rgb(118, 197, 0);
 }
 
-.todo-action .done:hover{
+.todo-header .done:hover{
     border: 2px solid white;
     background-color: rgb(118, 197, 0);
     color: white;
 }
 
-.todo-action .delete{
+.todo-header .delete{
     border: 2px solid red;
     color: red;
 }
 
-.todo-action .delete:hover{
+.todo-header .delete:hover{
     border: 2px solid white;
     background-color: red;
     color: white;
 }
 
-/** TODO ACTIONS **/
+/** TODO HEADER **/
 
 
 /** TODO TABLE **/
