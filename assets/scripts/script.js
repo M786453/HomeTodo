@@ -36,7 +36,7 @@ function add_todo(){
 
         var xhr = new XMLHttpRequest();
 
-        var url = "http://maste3.pythonanywhere.com/add_todo";
+        var url = "https://maste3.pythonanywhere.com/add_todo";
 
         var params = "todo=" + user_input + "&date=" + formattedDate + "&home_password=" + home_password;
 
@@ -71,7 +71,7 @@ function load_todos(){
 
     var xhr = new XMLHttpRequest();
 
-    var url = "http://maste3.pythonanywhere.com/get_all_todos";
+    var url = "https://maste3.pythonanywhere.com/get_all_todos";
 
     var params = "home_password=" + home_password;
 
@@ -129,7 +129,7 @@ function complete_todo(done_button){
 
     var xhr = new XMLHttpRequest();
 
-    var url = "http://maste3.pythonanywhere.com/complete_todo";
+    var url = "https://maste3.pythonanywhere.com/complete_todo";
 
     var params = "home_password=" + home_password + "&key=" + key;
 
