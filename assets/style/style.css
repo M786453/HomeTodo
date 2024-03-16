@@ -91,14 +91,16 @@ body{
 
 /** TODO TABLE **/
 #todo-table{
-    display: flex;
-    justify-content: center;
     text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .todo-row td{
     display: flex;
-    margin: 10px;
+    margin: 10px 0px 0px 0px;
+    
 }
 
 /** TODO **/
@@ -108,7 +110,7 @@ body{
     flex-direction: column;
     border: 2px solid white;
     padding: 5px;
-    width: 600px;
+    width: 100%;
 }
 
 .todo .title{
