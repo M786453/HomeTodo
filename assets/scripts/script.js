@@ -95,11 +95,13 @@ function load_todos(){
 
 function update_page(json_response){
 
-    for( var key in json_response){
+    for(const todo_element of json_response){
 
-        var todo_text = json_response[key].todo;
+        var todo_id = todo_element[0];
 
-        var date = json_response[key].date;
+        var date = todo_element[1];
+
+        var todo_text = todo_element[2];
 
         var table = document.getElementById("todo-table");
 
@@ -107,7 +109,7 @@ function update_page(json_response){
 
         todo_row.classList.add('todo-row');
 
-        todo_row.setAttribute('id',key);
+        todo_row.setAttribute('id',todo_id);
 
         var todo = todo_row.insertCell(0);
         
@@ -131,7 +133,7 @@ function complete_todo(done_button){
 
     var url = "https://maste3.pythonanywhere.com/complete_todo";
 
-    var params = "home_password=" + home_password + "&key=" + key;
+    var params = "home_password=" + home_password + "&id=" + key;
 
     xhr.open('POST', url, true);
 
